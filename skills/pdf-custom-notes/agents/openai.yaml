@@ -1,0 +1,6 @@
+interface:
+  display_name: "PDF Custom Notes"
+  short_description: "Turn PDFs into custom structured notes and PDFs"
+  default_prompt: "Use $pdf-custom-notes to turn this PDF into detailed notes using my requested format."
+policy:
+  allow_implicit_invocation: true
