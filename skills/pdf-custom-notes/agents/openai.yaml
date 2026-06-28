@@ -1,6 +1,6 @@
 interface:
-  display_name: "PDF Custom Notes"
-  short_description: "Turn PDFs into custom structured notes and PDFs"
-  default_prompt: "Use $pdf-custom-notes to turn this PDF into detailed notes using my requested format."
+  display_name: "PDF 自定义笔记"
+  short_description: "把 PDF 整理成自定义结构的复习资料、讲义和笔记"
+  default_prompt: "使用 $pdf-custom-notes 把这个 PDF 整理成我指定格式的详细复习资料，保留重要公式、表格和页码依据。"
 policy:
   allow_implicit_invocation: true
