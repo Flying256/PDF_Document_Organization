@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Convert structured Markdown notes into a Chinese-friendly LaTeX file and optional PDF."""
-
 from __future__ import annotations
 
 import argparse
