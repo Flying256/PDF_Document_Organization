@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""Extract PDF text page by page for custom note generation."""
-
 from __future__ import annotations
 
 import argparse
