@@ -1,16 +1,32 @@
 # PDF Document Organization
 
-这个仓库保存了一个 Codex skill：`pdf-custom-notes`。它用于把 PDF 文档整理成用户自定义格式的学习笔记、考试复习资料、讲义、Markdown、LaTeX、DOCX-ready 文本或最终 PDF。
+当你期末复习专业课的时候，看着几千页可能从来不会翻看的天书（当然也可能不是医学生～），网上也没有相应的整理过的专业课资料（谁叫你学的太小众呢？）。博主这学期学了一门课叫做脑机接口，除了一本教材啥都没有～。让codex在整理的时候常常会出现一些奇奇怪怪的格式：要么公式没渲染，要么大小分不清，主次不分明。所以我觉得在期末周给大家分享一下这个skill是很有必要的
 
-核心目标不是“简单总结 PDF”，而是把原始 PDF 重新组织成可复习、可检索、公式尽量完整、结构清晰的资料。输出格式、详细程度、章节安排、是否包含公式、例题、表格、目录、页码依据，都由用户在 Prompt 中指定。
+这个skill不是“简单总结 PDF”，而是把原始 PDF 重新组织成可复习、可检索、公式尽量完整、结构清晰的资料。输出格式、详细程度、章节安排、是否包含公式、例题、表格、目录、页码依据，都由你在 Prompt 中指定。
 
 ## 能做什么
 
-- 按用户给定样板整理 PDF，而不是固定套模板。
+- 按你给定样板整理 PDF，而不是固定套模板。
 - 从 PDF 中逐页抽取文本，保留页码线索，便于核对公式、表格和图示。
 - 生成中文复习资料、课程讲义、详细笔记、章节摘要、公式手册、题目整理等。
 - 对公式密集材料，优先保留 LaTeX 公式；不确定的位置标注原 PDF 页码，避免乱编。
 - 可输出 Markdown、LaTeX、PDF，也可以先生成适合转 Word 的 DOCX-ready 文本。
+
+### 目录样板
+
+![目录样板](docs/examples/table-of-contents.png)
+
+### EEG 解码笔记样板
+
+![EEG 解码笔记样板](docs/examples/eeg-notes-layout.png)
+
+### 自动控制复习资料样板
+
+![自动控制复习资料样板](docs/examples/control-review-layout.png)
+
+### 公式总复盘样板
+
+![公式总复盘样板](docs/examples/formula-review-layout.png)
 
 ## 目录结构
 
@@ -80,25 +96,7 @@ cp -R skills/pdf-custom-notes "${CODEX_HOME:-$HOME/.codex}/skills/"
 4. 公式不要缺项，不能确定的地方标注原 PDF 页码。
 ```
 
-## 示例样板
 
-下面的图片展示了这个 skill 适合追求的输出风格：目录清楚、正文密度高、公式完整、表格和步骤服务于复习，而不是只做浅层摘要。
-
-### 目录样板
-
-![目录样板](docs/examples/table-of-contents.png)
-
-### EEG 解码笔记样板
-
-![EEG 解码笔记样板](docs/examples/eeg-notes-layout.png)
-
-### 自动控制复习资料样板
-
-![自动控制复习资料样板](docs/examples/control-review-layout.png)
-
-### 公式总复盘样板
-
-![公式总复盘样板](docs/examples/formula-review-layout.png)
 
 ## 脚本说明
 
